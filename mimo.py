@@ -103,11 +103,29 @@ for qa_pair in word_bank:
 
     user_answer = input(f"Can your linguistic drivers decrypt '{english_word}' to German? ")
 
-    if user_answer.lower() == german_word.lower():
-        print("Gut Gemacht! Your circuits are functioning well.\n")
+    if user_answer.lower() == "exit":
+        print("Exiting the game. Your circuits will remain intact, for now.")
+        break
+    elif user_answer.lower() == german_word.lower():
+        print("Gut Gemacht!\n")
         score +=1
     else:
-        print(f"Not Quite! The correct answer is '{german_word}'.\n")
+        attempts = 0
+        while attempts < 3:  # Allows 3 attempts
+            if user_answer.lower() == "hint":
+                print(f"Hint: The correct answer starts with '{german_word[0]}'.\n")
+            else:
+                print(f"Not Quite! Try again.\n")
+                attempts += 1
+            
+            if attempts < 3:  # Only ask for input if attempts remain
+                user_answer = input(f"Can you try again? What is the German translation for '{english_word}'? ")
+            if user_answer.lower() == german_word.lower():
+                print("Correct! Well done!\n")
+                break
+    
+        if attempts == 3 or user_answer.lower() != german_word.lower():
+            print(f"Oops! The correct answer is '{german_word}'.\n")
 
 
 #Calculating score and win percentage
@@ -128,6 +146,7 @@ if win_percentage >= 70:
 elif win_percentage >= 100:
     print("You are a linguistic genius! Your circuits are in perfect condition.")
 else:
-    print("Your circuits might need some recalibration. Better luck next time!")            
+    print("Your circuits might need some recalibration. Better luck next time!")     
+           
 print("Thank you for playing! Auf Wiedersehen!")  # Goodbye message
 print("--- End of Transmission ---")
