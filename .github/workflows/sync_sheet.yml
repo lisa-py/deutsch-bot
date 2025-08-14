@@ -5,7 +5,7 @@ name: Sync Google Sheet CSV
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-  # Runs the job at 08:00 UTC every day
+  # Runs the job at 08:** UTC every day
   schedule:
     - cron: '0 8 * * *'
 
@@ -17,8 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Fetch the CSV from Google Sheets and save it
-      #    REPLACE THE URL in the command below
+      # 2. Fetching the CSV from Google Sheets and saving it
       - name: Fetch CSV data
         run: curl -L -o https://github.com/shiprasonalisa/deutsch-bot/german_english_vocabulary.csv 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQnIiDSkYW26wW06UVTrqfGWfQ50T3emZTfzqmAzqMyN0uygWKDILKIHhDdSkJxZEgOVGpXz6n7J7Yl/pub?output=csv'
 
