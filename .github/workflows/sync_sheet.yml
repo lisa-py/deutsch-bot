@@ -13,9 +13,9 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      # 1. Check out the repository so it can be updated
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      # 1. Create the repository so it can be updated
+      -- name: Create datasets directory
+         run: mkdir -p datasets
 
       # 2. Fetch the CSV from Google Sheets and save it
      
