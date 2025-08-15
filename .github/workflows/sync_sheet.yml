@@ -20,7 +20,7 @@ jobs:
         run: mkdir -p datasets
 
       - name: Fetch CSV data
-        run: curl -L -o datasets/german-english_vocabulary_sheet.csv 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQnIiDSkYW26wW06UVTrqfGWfQ50T3emZTfzqmAzqMyN0uygWKDILKIHhDdSkJxZEgOVGpXz6n7J7Y/pub?output=csv'
+        run: curl -L -o datasets/german-english_vocabulary_sheet.csv 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQnIiDSkYW26wW06UVTrqfGWfQ50T3emZTfzqmAzqMyN0uygWKDILKIHhDdSkJxZEgOVGpXz6n7J7Yl/pubhtml'
 
            # Step 3: Commit and push the changes to the repo
       - name: Commit and push if there are changes
