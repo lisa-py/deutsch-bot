@@ -13,11 +13,9 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-    #Check out the repository so it can be updated
       - name: Checkout repository
         uses: actions/checkout@v4
-        
-    #Create the repository
+
       - name: Create datasets directory
         run: mkdir -p datasets
 
