@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 1. Create the repository so it can be updated
-      -- name: Create datasets directory
-         run: mkdir -p datasets
+      - name: Create datasets directory
+        run: mkdir -p datasets
 
       # 2. Fetch the CSV from Google Sheets and save it
      
