@@ -22,7 +22,7 @@ jobs:
       - name: Fetch CSV data
         run: curl -L -o datasets/german-english_vocabulary_sheet.csv 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQnIiDSkYW26wW06UVTrqfGWfQ50T3emZTfzqmAzqMyN0uygWKDILKIHhDdSkJxZEgOVGpXz6n7J7Yl/pub?output=csv'
 
-           # Step 3: Commit and push the changes to the repo
+           #Commit and push the changes to the repo
       - name: Commit and push if there are changes
         run: |
           git config --global user.name 'github-actions[bot]'
